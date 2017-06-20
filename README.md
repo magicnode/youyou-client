@@ -1,5 +1,5 @@
 腾讯云微信小程序一站式解决方案客户端示例
-=====================================
+
 
 本示例包含：
 
@@ -51,3 +51,6 @@ Demo
 `config.js` 是我们小程序自己的业务配置。
 
 `vendor/qcloud-weapp-client-sdk` 是[客户端 SDK](https://github.com/tencentyun/weapp-client-sdk) 的一份拷贝。
+=======
+# youyou-client
+youyou wxapp client
