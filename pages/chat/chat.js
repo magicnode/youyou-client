@@ -2,7 +2,6 @@
  * @fileOverview 聊天室综合 Demo 示例
  */
 
-
 // 引入 QCloud 小程序增强 SDK
 var qcloud = require('../../vendor/qcloud-weapp-client-sdk/index');
 
@@ -41,7 +40,7 @@ Page({
      */
     data: {
         messages: [],
-        inputContent: '大家好啊',
+        inputContent: '你个silly be',
         lastMessageId: 'none',
     },
 
@@ -49,7 +48,7 @@ Page({
      * 页面渲染完成后，启动聊天室
      * */
     onReady() {
-        wx.setNavigationBarTitle({ title: '三木聊天室' });
+        wx.setNavigationBarTitle({ title: '圈嘀聊天室' });
 
         if (!this.pageReady) {
             this.pageReady = true;

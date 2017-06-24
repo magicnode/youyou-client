@@ -1,7 +1,4 @@
 <view class="root">
-    <view>
-        <text>首页</text>
-    </view>
     <view class="line">
         <text>综合示例</text>
         <view bindtap="openChat" class="demo">
