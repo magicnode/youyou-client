@@ -1,0 +1,63 @@
+<view class="header">
+  <view class="search">
+    <image class="icon" src="/assets/imgs/index/icon_search.png" />
+    <input bindinput="inputSearch" placeholder="{{placeholder}}" auto-focus/>
+  </view>
+  <button class="yellow {{searchWords.length?'':'disabled'}}" size="mini" hover-class="hover" loading="" plain="" disabled="{{!searchWords.length}}" bindtap="doSearch">搜索
+  </button>
+</view>
+
+<scroll-view scroll-y="true" bindscroll="onScroll">
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+  <view>努力加载中…</view>
+</scroll-view>

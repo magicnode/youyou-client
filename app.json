@@ -2,12 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/chat/chat",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/search/search",
+    "pages/switchcity/switchcity",
+    "pages/user/user"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#333",
-    "navigationBarTitleText": "腾讯云小程序解决方案",
-    "navigationBarTextStyle": "white"
+    "navigationBarTitleText": "颢拢假期小程序",
+    "navigationBarBackgroundColor": "#feb70f",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark"
   }
 }
