@@ -19,9 +19,12 @@ App({
       }else{
         //调用登录接口
         wx.login({
-          success: function () {
+          success: function (login) {
             wx.getUserInfo({
               success: function (res) {
+                if (login.code) {
+                  that.globalData.code = login.code
+                }
                 that.globalData.userInfo = res.userInfo
                 typeof cb == "function" && cb(that.globalData.userInfo)
               }
@@ -35,6 +38,7 @@ App({
       this.globalData.city = city
     },
     globalData:{
+      code: null,
       userInfo:null,
       city:null
     }

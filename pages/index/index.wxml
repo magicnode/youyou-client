@@ -3,7 +3,8 @@
   <view class="header scrolled">
     <view class="location" bindtap="switchCity">
       <view class="locationName">
-        <image class="icon" src="/assets/imgs/index/icon_location.png" /> {{city}}</view>
+        <image class="icon" src="/assets/imgs/index/icon_location.png" />{{city}}
+      </view>
     </view>
     <view class="search" bindtap="tapSearch">
       <image class="icon" src="/assets/imgs/index/icon_search.png" /> 上海周边游
@@ -13,8 +14,34 @@
     </view>
   </view>
 
-  <view class="">
+  <view class="classify">
+    <view class="classify-item">
+      <view class="classify-item__img">
+        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+      </view>
+      <text>国内长线</text>
+    </view>
+
+    <view class="classify-item">
+      <view class="classify-item__img">
+        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+      </view>
+      <text>国内中线</text>
+    </view>
     
+    <view class="classify-item">
+      <view class="classify-item__img">
+        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+      </view>
+      <text>周边短线</text>
+    </view>
+
+    <view class="classify-item">
+      <view class="classify-item__img">
+        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+      </view>
+      <text>自驾游</text>
+    </view>
   </view>
 
   <scroll-view scroll-y="true" bindscroll="onScroll">

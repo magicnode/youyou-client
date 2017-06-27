@@ -11,7 +11,6 @@ scroll-view {
 }
 
 .header {
-  position: fixed;
   display: flex;
   left: 0;
   top: 0;
@@ -25,7 +24,6 @@ scroll-view {
 
 .header .locationName {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -50,7 +48,7 @@ scroll-view {
   font-size: 30rpx;
   line-height: 40rpx;
   min-width: 100rpx;
-  max-width: 340rpx;
+  max-width: 140rpx;
   padding: 10rpx 20rpx 10rpx 10rpx;
   border-radius: 30rpx;
   background: rgba(0, 0, 0, 0.3);
@@ -78,4 +76,31 @@ scroll-view {
   width:58rpx;
   height:58rpx;
   border-radius: 50%;
+}
+
+.classify {
+  margin-top: 20rpx;
+  background: white;
+  padding: 20rpx 10rpx;
+  display: flex;
+}
+
+.classify .classify-item {
+  text-align: center;
+  flex: 1;
+}
+
+.classify .classify-item .classify-item__img {
+  font-size: 0;
+}
+
+.classify .classify-icon {
+  width:58rpx;
+  height:58rpx;
+  border-radius: 50%;
+}
+
+.classify text {
+  color: #999;
+  font-size: 25rpx;
 }

@@ -3,7 +3,6 @@ const app = getApp()
 Page({
   onLoad: function () {
     app.getUserInfo(user => {
-      console.log('app', app.globalData)
       this.setData({
         scrollDown: true,
         address: "定位中",
@@ -13,7 +12,7 @@ Page({
   },
   onShow: function () {
     this.setData({
-      city: app.globalData.city || '上海'
+      city: app.globalData.city || '上海市'
     })
   },
   onScroll: function (e) {
@@ -111,4 +110,3 @@ Page({
     wx.navigateTo({ url: '../switchcity/switchcity' });
   }
 });
-
