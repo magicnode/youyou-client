@@ -25,7 +25,6 @@ scroll-view {
 
 .header .locationName {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -49,8 +48,8 @@ scroll-view {
   color: #fff;
   font-size: 30rpx;
   line-height: 40rpx;
+  max-width: 140rpx;
   min-width: 100rpx;
-  max-width: 340rpx;
   padding: 10rpx 20rpx 10rpx 10rpx;
   border-radius: 30rpx;
   background: rgba(0, 0, 0, 0.3);

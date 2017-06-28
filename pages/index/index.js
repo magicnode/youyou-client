@@ -13,7 +13,7 @@ Page({
   },
   onShow: function () {
     this.setData({
-      city: app.globalData.city || '上海'
+      city: app.globalData.city || '上海市'
     })
   },
   onScroll: function (e) {
@@ -109,6 +109,12 @@ Page({
   // get city location
   switchCity: function () {
     wx.navigateTo({ url: '../switchcity/switchcity' });
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
   }
 });
 

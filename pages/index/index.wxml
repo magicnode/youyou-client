@@ -3,7 +3,7 @@
   <view class="header scrolled">
     <view class="location" bindtap="switchCity">
       <view class="locationName">
-        <image class="icon" src="/assets/imgs/index/icon_location.png" /> {{city}}</view>
+        <image class="icon" src="/assets/imgs/index/icon_location.png" />{{city}}</view>
     </view>
     <view class="search" bindtap="tapSearch">
       <image class="icon" src="/assets/imgs/index/icon_search.png" /> 上海周边游
