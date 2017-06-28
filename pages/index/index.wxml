@@ -9,6 +9,7 @@
     <view class="search" bindtap="tapSearch">
       <image class="icon" src="/assets/imgs/index/icon_search.png" /> 上海周边游
     </view>
+
     <view class="user" bindtap="tapUser">
       <image class="icon user-icon" src="{{user.avatarUrl}}" />
     </view>
@@ -45,6 +46,44 @@
   </view>
 
   <scroll-view scroll-y="true" bindscroll="onScroll">
-    
+    <view class="scroll-title">
+      <text>猜你喜欢</text>
+    </view>
+
+    <view class="waterfall">
+      <view class="waterfall-container" wx:for="{{recomment}}">
+        <view class="waterfall-container__image">
+          <view class="waterfall-container__image--hang">
+            <text>{{item.hang}}</text>
+          </view>
+          <image class="" src="{{user.avatarUrl}}" />
+        </view>
+        <view class="waterfall-container__info">
+          <view class="waterfall-container__info--title">
+            <text class="title-left">{{item.title}}</text>
+            <text class="title-right">{{item.feature}}</text>
+          </view>
+
+          <view class="waterfall-container__info--reason">
+            <text class="reason-left">【推荐理由】</text>
+            <text class="reason-right">{{item.reason}}</text>
+          </view>
+
+          <view class="waterfall-container__info--money">
+            <view class="money-left">
+              <text class="sale-price">
+                {{'￥' + item.salePrice}}
+              </text>
+              <text class="original-price">
+                {{'￥' + item.originalPrice}}
+              </text>
+            </view>
+            <text class="money-right">
+              {{'已售' + item.saleCount}}
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
   </scroll-view>
 </view>

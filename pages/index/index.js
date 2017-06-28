@@ -12,7 +12,32 @@ Page({
   },
   onShow: function () {
     this.setData({
-      city: app.globalData.city || '上海市'
+      city: app.globalData.city || '上海市',
+      recomment: [{
+        title: '美食线路',
+        salePrice: 1200,
+        originalPrice: 1430,
+        reason: '专业定制',
+        saleCount: 120,
+        feature: '热门',
+        hang: '免预约'
+      }, {
+        title: '香港线路',
+        salePrice: 2561,
+        originalPrice: 3200,
+        reason: '专业定制，免签证，好玩as大是大非爱ad哈斯',
+        saleCount: 1690,
+        feature: '热门',
+        hang: '免预约'
+      }, {
+        title: '泰国线路',
+        salePrice: 2561,
+        originalPrice: 3200,
+        reason: '专业定阿萨德制，免签证，好玩as大是大非爱ad哈斯',
+        saleCount: 1690,
+        feature: '热门',
+        hang: '免预约'
+      }]
     })
   },
   onScroll: function (e) {
