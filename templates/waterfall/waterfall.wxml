@@ -1,0 +1,37 @@
+<!-- waterfall.wxml -->
+
+<template name="waterfall" class="waterfall">
+	<view class="waterfall-container">
+	  <view class="waterfall-container__image">
+	    <view class="waterfall-container__image--hang">
+	      <text>{{hang}}</text>
+	    </view>
+	    <image class="" src="{{imgurl}}" />
+	  </view>
+	  <view class="waterfall-container__info">
+	    <view class="waterfall-container__info--title">
+	      <text class="title-left">{{title}}</text>
+	      <text class="title-right">{{feature}}</text>
+	    </view>
+
+	    <view class="waterfall-container__info--reason">
+	      <text class="reason-left">【推荐理由】</text>
+	      <text class="reason-right">{{reason}}</text>
+	    </view>
+
+	    <view class="waterfall-container__info--money">
+	      <view class="money-left">
+	        <text class="sale-price">
+	          {{'￥' + salePrice}}
+	        </text>
+	        <text class="original-price">
+	          {{'￥' + originalPrice}}
+	        </text>
+	      </view>
+	      <text class="money-right">
+	        {{'已售' + saleCount}}
+	      </text>
+	    </view>
+	  </view>
+	</view>
+</template>

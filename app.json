@@ -5,10 +5,12 @@
     "pages/test/test",
     "pages/search/search",
     "pages/switchcity/switchcity",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/searchinput/searchinput",
+    "templates/waterfall/waterfall"
   ],
   "window": {
-    "navigationBarTitleText": "颢拢假期小程序",
+    "navigationBarTitleText": "颢拢假期",
     "navigationBarBackgroundColor": "#feb70f",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#efefef",

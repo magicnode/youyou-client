@@ -1,7 +1,7 @@
 Page({
   data: {
     searchWords: '',
-    placeholder: '输入线路名、出发城市'
+    placeholder: '上海周边游'
   },
   onLoad: function () {
   },

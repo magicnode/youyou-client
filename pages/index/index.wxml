@@ -1,12 +1,13 @@
-<view class="container">
+<import src="../../templates/waterfall/waterfall.wxml" />
 
+<view class="container">
   <view class="header scrolled">
     <view class="location" bindtap="switchCity">
       <view class="locationName">
         <image class="icon" src="/assets/imgs/index/icon_location.png" />{{city}}
       </view>
     </view>
-    <view class="search" bindtap="tapSearch">
+    <view class="search" bindtap="tapSearchInput">
       <image class="icon" src="/assets/imgs/index/icon_search.png" /> 上海周边游
     </view>
 
@@ -16,7 +17,7 @@
   </view>
 
   <view class="classify">
-    <view class="classify-item">
+    <view class="classify-item" data-id="1" bindtap="tapSearchIndex">
       <view class="classify-item__img">
         <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
       </view>
@@ -51,39 +52,7 @@
     </view>
 
     <view class="waterfall">
-      <view class="waterfall-container" wx:for="{{recomment}}">
-        <view class="waterfall-container__image">
-          <view class="waterfall-container__image--hang">
-            <text>{{item.hang}}</text>
-          </view>
-          <image class="" src="{{user.avatarUrl}}" />
-        </view>
-        <view class="waterfall-container__info">
-          <view class="waterfall-container__info--title">
-            <text class="title-left">{{item.title}}</text>
-            <text class="title-right">{{item.feature}}</text>
-          </view>
-
-          <view class="waterfall-container__info--reason">
-            <text class="reason-left">【推荐理由】</text>
-            <text class="reason-right">{{item.reason}}</text>
-          </view>
-
-          <view class="waterfall-container__info--money">
-            <view class="money-left">
-              <text class="sale-price">
-                {{'￥' + item.salePrice}}
-              </text>
-              <text class="original-price">
-                {{'￥' + item.originalPrice}}
-              </text>
-            </view>
-            <text class="money-right">
-              {{'已售' + item.saleCount}}
-            </text>
-          </view>
-        </view>
-      </view>
-    </view>
+      <template is="waterfall" data="{{...item}}" wx:for="{{recomment}}" wx:key="{{index}}" />
+   </view>
   </scroll-view>
 </view>

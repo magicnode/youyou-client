@@ -1,6 +1,8 @@
 const app = getApp()
 
 Page({
+  data: {
+  },
   onLoad: function () {
     app.getUserInfo(user => {
       this.setData({
@@ -20,7 +22,8 @@ Page({
         reason: '专业定制',
         saleCount: 120,
         feature: '热门',
-        hang: '免预约'
+        hang: '免预约',
+        imgurl: 'https://wx.qlogo.cn/mmopen/vi_32/b54K8Bpv1QkIw51JNBafm5rMJ1Xib6LNLOYzjqs4md1snTQ7Bb0McianrHe02atGA0baGNJakWHCoibbibcicDiaHYOg/0'
       }, {
         title: '香港线路',
         salePrice: 2561,
@@ -28,7 +31,8 @@ Page({
         reason: '专业定制，免签证，好玩as大是大非爱ad哈斯',
         saleCount: 1690,
         feature: '热门',
-        hang: '免预约'
+        hang: '免预约',
+        imgurl: 'https://wx.qlogo.cn/mmopen/vi_32/b54K8Bpv1QkIw51JNBafm5rMJ1Xib6LNLOYzjqs4md1snTQ7Bb0McianrHe02atGA0baGNJakWHCoibbibcicDiaHYOg/0'
       }, {
         title: '泰国线路',
         salePrice: 2561,
@@ -36,7 +40,8 @@ Page({
         reason: '专业定阿萨德制，免签证，好玩as大是大非爱ad哈斯',
         saleCount: 1690,
         feature: '热门',
-        hang: '免预约'
+        hang: '免预约',
+        imgurl: 'https://wx.qlogo.cn/mmopen/vi_32/b54K8Bpv1QkIw51JNBafm5rMJ1Xib6LNLOYzjqs4md1snTQ7Bb0McianrHe02atGA0baGNJakWHCoibbibcicDiaHYOg/0'
       }]
     })
   },
@@ -51,9 +56,15 @@ Page({
       });
     }
   },
-  // 搜索
-  tapSearch: function () {
-    wx.navigateTo({ url: '../search/search' });
+  // 进入搜索框界面
+  tapSearchInput: function () {
+    wx.navigateTo({ url: '../searchinput/searchinput' });
+  },
+  // 进入搜索主界面
+  tapSearchIndex: function (event) {
+    const id = event.currentTarget.id || 1
+    const url = '../search/search?id=' + id
+    wx.navigateTo({ url })
   },
   // 进入用户中心
   tapUser: function () {
