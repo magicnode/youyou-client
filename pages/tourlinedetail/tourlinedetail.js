@@ -1,4 +1,4 @@
-// waterfall.js
+// tourline.js
 Page({
 
   /**

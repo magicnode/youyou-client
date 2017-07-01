@@ -1,3 +1,5 @@
+const tourlinelist = require('../../utils/tourline.js');
+
 const app = getApp()
 
 Page({
@@ -16,6 +18,7 @@ Page({
     this.setData({
       city: app.globalData.city || '上海市',
       recomment: [{
+        id: 1,
         title: '美食线路',
         salePrice: 1200,
         originalPrice: 1430,
@@ -25,6 +28,7 @@ Page({
         hang: '免预约',
         imgurl: 'https://wx.qlogo.cn/mmopen/vi_32/b54K8Bpv1QkIw51JNBafm5rMJ1Xib6LNLOYzjqs4md1snTQ7Bb0McianrHe02atGA0baGNJakWHCoibbibcicDiaHYOg/0'
       }, {
+        id: 2,
         title: '香港线路',
         salePrice: 2561,
         originalPrice: 3200,
@@ -34,6 +38,7 @@ Page({
         hang: '免预约',
         imgurl: 'https://wx.qlogo.cn/mmopen/vi_32/b54K8Bpv1QkIw51JNBafm5rMJ1Xib6LNLOYzjqs4md1snTQ7Bb0McianrHe02atGA0baGNJakWHCoibbibcicDiaHYOg/0'
       }, {
+        id: 3,
         title: '泰国线路',
         salePrice: 2561,
         originalPrice: 3200,
@@ -150,5 +155,6 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  tapTourlineDetail: tourlinelist.tapTourlineDetail
 });

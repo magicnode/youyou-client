@@ -1,0 +1,10 @@
+<!--tourlinedetail.wxml-->
+<view class="tourlinedetail">
+	<view class="tourlinedetail-header">
+    <image class="icon" src="/assets/imgs/index/icon_location.png" />
+    <view>
+    	<text>东方明珠</text>
+    	<text>热门景点</text>
+    </view>
+	</view>
+</view>

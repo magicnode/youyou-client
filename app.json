@@ -7,7 +7,8 @@
     "pages/switchcity/switchcity",
     "pages/user/user",
     "pages/searchinput/searchinput",
-    "templates/waterfall/waterfall"
+    "templates/tourlinelist/tourlinelist",
+    "pages/tourlinedetail/tourlinedetail"
   ],
   "window": {
     "navigationBarTitleText": "颢拢假期",

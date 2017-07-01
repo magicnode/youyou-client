@@ -1,4 +1,4 @@
-<import src="../../templates/waterfall/waterfall.wxml" />
+<import src="../../templates/tourlinelist/tourlinelist.wxml" />
 
 <view class="container">
   <view class="header scrolled">
@@ -51,8 +51,8 @@
       <text>猜你喜欢</text>
     </view>
 
-    <view class="waterfall">
-      <template is="waterfall" data="{{...item}}" wx:for="{{recomment}}" wx:key="{{index}}" />
+    <view class="tourlinelist">
+      <template is="tourlinelist" data="{{...item}}" wx:for="{{recomment}}" wx:key="{{index}}" />
    </view>
   </scroll-view>
 </view>

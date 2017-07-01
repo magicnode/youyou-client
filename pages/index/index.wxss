@@ -1,4 +1,4 @@
-@import "../../templates/waterfall/waterfall.wxss";
+@import "../../templates/tourlinelist/tourlinelist.wxss";
 
 page {
   height: 100%;
