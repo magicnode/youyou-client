@@ -16,6 +16,9 @@ Page({
     city:""
   },
   onLoad: function (options) {
+    this.setData({
+      nowCity: app.globalData.city || '上海市'
+    })
     // 生命周期函数--监听页面加载
     var searchLetter = city.searchLetter;
     var cityList=city.cityList();

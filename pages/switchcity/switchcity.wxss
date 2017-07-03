@@ -18,6 +18,12 @@
     background-color: rgba(0, 0, 0,0.5);
     color: #fff;
 }
+
+.nowCity {
+    padding: 18rpx;
+    font-size: 36rpx;
+}
+
 .showSlectedLetter{
     background-color: rgba(0, 0, 0,0.5);
     color: #fff;

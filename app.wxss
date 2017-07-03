@@ -6,7 +6,7 @@ page {
 
 button.yellow {
   color: #fff;
-  background: #feb70f;
+  background: #70aaf4;
 }
 
 button.yellow:after {

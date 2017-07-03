@@ -4,11 +4,16 @@
   <view class="header scrolled">
     <view class="location" bindtap="switchCity">
       <view class="locationName">
-        <image class="icon" src="/assets/imgs/index/icon_location.png" />{{city}}
+        <text class="location-text">
+          {{city}}
+        </text>
+        <view class="location-img">
+          <image class="icon" src="/assets/imgs/index/icon_arrow_down.png" />
+        </view>
       </view>
     </view>
     <view class="search" bindtap="tapSearchInput">
-      <image class="icon" src="/assets/imgs/index/icon_search.png" /> 上海周边游
+      <image class="icon" src="/assets/imgs/index/icon_search_white.png" />搜索想去的目的地、景点
     </view>
 
     <view class="user" bindtap="tapUser">
@@ -16,37 +21,51 @@
     </view>
   </view>
 
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
   <view class="classify">
     <view class="classify-item" data-id="1" bindtap="tapSearchIndex">
       <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+        <image class="classify-icon" src="/assets/imgs/index/icon_long.png" />
       </view>
       <text>国内长线</text>
     </view>
 
     <view class="classify-item">
       <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+        <image class="classify-icon" src="/assets/imgs/index/icon_middle.png" />
       </view>
       <text>国内中线</text>
     </view>
     
     <view class="classify-item">
       <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+        <image class="classify-icon" src="/assets/imgs/index/icon_arround.png" />
       </view>
       <text>周边短线</text>
     </view>
 
     <view class="classify-item">
       <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_location.png" />
+        <image class="classify-icon" src="/assets/imgs/index/icon_self.png" />
       </view>
       <text>自驾游</text>
     </view>
+
+    <view class="classify-line"></view>
+
   </view>
 
-  <scroll-view scroll-y="true" bindscroll="onScroll">
+<!--   <scroll-view scroll-y="true" bindscroll="onScroll">
     <view class="scroll-title">
       <text>猜你喜欢</text>
     </view>
@@ -54,5 +73,5 @@
     <view class="tourlinelist">
       <template is="tourlinelist" data="{{...item}}" wx:for="{{recomment}}" wx:key="{{index}}" />
    </view>
-  </scroll-view>
+  </scroll-view> -->
 </view>

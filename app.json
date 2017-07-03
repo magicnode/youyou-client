@@ -11,10 +11,10 @@
     "pages/tourlinedetail/tourlinedetail"
   ],
   "window": {
-    "navigationBarTitleText": "颢拢假期",
-    "navigationBarBackgroundColor": "#feb70f",
+    "navigationBarTitleText": "颢拢国旅",
+    "navigationBarBackgroundColor": "#70aaf4",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#efefef",
+    "backgroundColor": "#70aaf4",
     "backgroundTextStyle": "dark"
   }
 }
