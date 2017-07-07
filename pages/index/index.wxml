@@ -24,7 +24,7 @@
   <view class="swiper">
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item>
           <image src="{{item}}" class="slide-image" />
         </swiper-item>
@@ -33,45 +33,54 @@
   </view>
 
   <view class="classify">
-    <view class="classify-item" data-id="1" bindtap="tapSearchIndex">
-      <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_long.png" />
+    <view class="classify-wrapper">
+      <view class="classify-item" data-id="1" bindtap="tapSearchIndex">
+        <view class="classify-item__img">
+          <image class="classify-icon" src="/assets/imgs/index/icon_long.png" />
+        </view>
+        <text>国内长线</text>
       </view>
-      <text>国内长线</text>
-    </view>
 
-    <view class="classify-item">
-      <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_middle.png" />
+      <view class="classify-item">
+        <view class="classify-item__img">
+          <image class="classify-icon" src="/assets/imgs/index/icon_middle.png" />
+        </view>
+        <text>国内中线</text>
       </view>
-      <text>国内中线</text>
-    </view>
-    
-    <view class="classify-item">
-      <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_arround.png" />
+      
+      <view class="classify-item">
+        <view class="classify-item__img">
+          <image class="classify-icon" src="/assets/imgs/index/icon_arround.png" />
+        </view>
+        <text>周边短线</text>
       </view>
-      <text>周边短线</text>
-    </view>
 
-    <view class="classify-item">
-      <view class="classify-item__img">
-        <image class="classify-icon" src="/assets/imgs/index/icon_self.png" />
+      <view class="classify-item">
+        <view class="classify-item__img">
+          <image class="classify-icon" src="/assets/imgs/index/icon_self.png" />
+        </view>
+        <text>自驾游</text>
       </view>
-      <text>自驾游</text>
     </view>
-
-    <view class="classify-line"></view>
-
   </view>
 
-<!--   <scroll-view scroll-y="true" bindscroll="onScroll">
-    <view class="scroll-title">
-      <text>猜你喜欢</text>
+  <view class="show">
+    <view class="show-title">
+      <view class="show-title-wrapper">
+        — 玩遍中国  —
+        <text class="show-title--all">查看全部</text>
+      </view>
     </view>
 
-    <view class="tourlinelist">
-      <template is="tourlinelist" data="{{...item}}" wx:for="{{recomment}}" wx:key="{{index}}" />
-   </view>
-  </scroll-view> -->
+    <view class="show-scroll">
+      <scroll-view class="show-scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view class="show-scroll-view__item demo-text-1">
+
+          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+        </view>
+        <view  class="scroll-view-item_H demo-text-2"></view>
+        <view class="scroll-view-item_H demo-text-3"></view>
+      </scroll-view>
+    </view>
+  </view>
 </view>

@@ -8,18 +8,7 @@ page {
   background: white;
   height: 100%;
   overflow-x: hidden;
-}
-
-scroll-view {
-  height: 100%;
-  margin-top: 20rpx;
-  background: white;
-  padding: 20rpx 10rpx 10rpx 20rpx;
-}
-
-scroll-view .scroll-title{
-  color: #999;
-  font-size: 30rpx;
+  overflow-y: hidden;
 }
 
 .header {
@@ -138,8 +127,13 @@ scroll-view .scroll-title{
 
 .classify {
   background: white;
-  padding: 20rpx 10rpx;
+  padding: 20rpx 20rpx;
+}
+
+.classify .classify-wrapper {
+  padding-bottom: 10rpx;
   display: flex;
+  border-bottom: 1px solid #ececec;
 }
 
 .classify .classify-item {
@@ -162,6 +156,84 @@ scroll-view .scroll-title{
   font-size: 28rpx;
 }
 
-.classify .classify-line {
-  border-bottom: 1rpx solid #000;
+
+.show .show-title {
+  padding-bottom: 20rpx;
+}
+
+.show .show-title .show-title-wrapper {
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.show .show-title--all {
+  color: #666;
+  position: absolute;
+  right: 20rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+scroll-view {
+  height: 100%;
+  background: white;
+  padding-left: 36rpx;
+}
+
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+
+.scroll-view-item_H{
+  display: inline-block;
+  margin-right: 30rpx;
+  width: 86%;
+  height: 410rpx;
+}
+
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #1AAD19;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-1:before{
+  content: 'A';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-2:before{
+  content: 'B';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36rpx;
+}
+.demo-text-3:before{
+  content: 'C';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
