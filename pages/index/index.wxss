@@ -188,17 +188,45 @@ scroll-view {
 .show-scroll-view__item{
   display: inline-block;
   margin-right: 30rpx;
+  margin-bottom: 10rpx;
   width: 86%;
   height: 410rpx;
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #1AAD19;
-  color: #FFFFFF;
   font-size: 36rpx;
+  box-shadow: 1px 1px 12px #666;
 }
 
-.show-scroll-view__item image{
+.show-scroll-view__item .scroll-image {
+  height: 300rpx;
+}
+
+.show-scroll-view__item .scroll-image image{
   width: 100%;
   height: 100%;
+}
+
+.show-scroll-view__item .scroll-info {
+  padding: 20rpx;
+  overflow: hidden;
+}
+
+.show-scroll-view__item .scroll-info .scroll-info-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show-scroll-view__jump {
+  display: inline-block;
+  margin-right: 30rpx;
+  margin-bottom: 10rpx;
+  width: 20%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  box-shadow: 1px 1px 12px #666;
 }

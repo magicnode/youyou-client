@@ -52,7 +52,6 @@ Page({
     }]
   },
   scroll: function(e) {
-    console.log(e)
   },
   onLoad: function () {
     app.getUserInfo(user => {

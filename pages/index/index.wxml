@@ -1,5 +1,3 @@
-<import src="../../templates/tourlinelist/tourlinelist.wxml" />
-
 <view class="container">
   <view class="header scrolled">
     <view class="location" bindtap="switchCity">
@@ -74,14 +72,18 @@
 
     <view class="show-scroll">
       <scroll-view class="show-scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
-        <view class="show-scroll-view__item">
-          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
-        </view>
-        <view  class="show-scroll-view__item demo-text-2">
-          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
-        </view>
-        <view class="show-scroll-view__item demo-text-3">
-          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+        <block wx:for="{{show}}">
+          <view class="show-scroll-view__item">
+            <view class="scroll-image">
+              <image src="{{item.imgurl}}" />
+            </view>
+            <view class="scroll-info">
+              <view class="scroll-info-title">{{item.title}}</view>
+            </view>
+          </view>
+        </block>
+        <view class="show-scroll-view__jump">
+          <text>查看全部</text>
         </view>
       </scroll-view>
     </view>
