@@ -1,0 +1,25 @@
+<!-- search.wxml -->
+
+<template name="search" class="search">
+	<view class="search-container">
+		<view class="header scrolled">
+		  <view class="location" bindtap="switchCity">
+		    <view class="locationName">
+		      <text class="location-text">
+		        {{city}}
+		      </text>
+		      <view class="location-img">
+		        <image class="icon" src="/assets/imgs/index/icon_arrow_down.png" />
+		      </view>
+		    </view>
+		  </view>
+		  <view class="search" bindtap="tapSearchInput">
+		    <image class="icon" src="/assets/imgs/index/icon_search_white.png" />搜索想去的目的地、景点
+		  </view>
+
+		  <view class="user" bindtap="tapUser">
+		    <image class="icon user-icon" src="{{avatarUrl || '/assets/imgs/index/icon_user.png'}}" alt="用户中心" />
+		  </view>
+		</view>
+	</view>
+</template>

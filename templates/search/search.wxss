@@ -1,0 +1,101 @@
+/* search.wxss */
+.header {
+  display: flex;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 18rpx;
+  padding-right: 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* 顶部搜索层 背景色*/
+
+.header.scrolled {
+  background: #70aaf4;
+}
+
+/* 定位 */
+
+.header .location {
+  flex: 1;
+  color: #fff;
+  max-width: 140rpx;
+  min-width: 100rpx;
+  height: 48rpx;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+  border-radius: 6rpx  0 0 6rpx;
+  background: rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+}
+
+/* 定位文本长度控制 */
+
+.header .locationName {
+  display: flex;
+  align-items:center;
+  text-align: center;
+  max-width: 140rpx;
+  white-space: nowrap;
+}
+
+.header .location .location-text {
+  text-align: center;
+  max-width: 90rpx;
+  min-height: 41rpx;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 4rpx;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  line-height: 16rpx;
+  white-space: nowrap;
+  vertical-align: text-bottom;
+}
+
+.header .location .location-img {
+  display: inline-block;
+  font-size: 0;
+}
+
+.header .location .icon {
+  width: 20rpx;
+  height: 18rpx;
+  vertical-align: text-bottom;
+}
+
+/*搜索框*/
+
+.header .search {
+  display: flex;
+  align-items:center;
+  flex: 4;
+  color: #fff;
+  height: 48rpx;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  padding: 10rpx;
+  border-radius: 0 6rpx 6rpx 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header .search .icon {
+  margin-right: 4rpx;
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: text-bottom;
+}
+
+.user {
+  flex: 1;
+  text-align: center;
+  font-size: 0;
+}
+
+.user .user-icon {
+  width:56rpx;
+  height:56rpx;
+  border-radius: 50%;
+}

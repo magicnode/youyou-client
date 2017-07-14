@@ -8,7 +8,8 @@
     "pages/user/user",
     "pages/searchinput/searchinput",
     "templates/tourlinelist/tourlinelist",
-    "pages/tourlinedetail/tourlinedetail"
+    "pages/tourlinedetail/tourlinedetail",
+    "templates/search/search"
   ],
   "window": {
     "navigationBarTitleText": "颢拢国旅",

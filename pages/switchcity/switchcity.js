@@ -47,24 +47,16 @@ Page({
     })
 
   },
-  onShareAppMessage: function () {
-    // 用户点击右上角分享
-    return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
-    }
-  },
   searchStart: function (e) {
     var showLetter = e.currentTarget.dataset.letter;
     var pageY = e.touches[0].pageY;
     this.setScrollTop(this,showLetter);
     this.nowLetter(pageY,this);
-      this.setData({
-        showLetter: showLetter,
-        startPageY: pageY,
-        isShowLetter:true,
-      })
+    this.setData({
+      showLetter: showLetter,
+      startPageY: pageY,
+      isShowLetter:true,
+    })
   },
   searchMove: function (e) {
     var pageY = e.touches[0].pageY;
@@ -92,7 +84,6 @@ Page({
       isShowLetter:false
     })
     },1000)
-    
   },
   nowLetter: function (pageY, that) {//当前选中的信息
     var letterData = this.data.searchLetter;
@@ -115,7 +106,7 @@ Page({
       tHeight:tHeight,
       showLetter:showLetter,
       startPageY:pageY
-      })
+    })
   },
   bindScroll:function(e){
   },

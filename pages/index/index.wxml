@@ -1,27 +1,10 @@
-<view class="container">
-  <view class="header scrolled">
-    <view class="location" bindtap="switchCity">
-      <view class="locationName">
-        <text class="location-text">
-          {{city}}
-        </text>
-        <view class="location-img">
-          <image class="icon" src="/assets/imgs/index/icon_arrow_down.png" />
-        </view>
-      </view>
-    </view>
-    <view class="search" bindtap="tapSearchInput">
-      <image class="icon" src="/assets/imgs/index/icon_search_white.png" />搜索想去的目的地、景点
-    </view>
+<import src="../../templates/search/search.wxml"/>
 
-    <view class="user" bindtap="tapUser">
-      <image class="icon user-icon" src="{{user.avatarUrl}}" />
-    </view>
-  </view>
+<view class="container">
+  <template is="search" data="{{...search}}"/>
 
   <view class="swiper">
-    <swiper indicator-dots="{{indicatorDots}}"
-      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper indicator-dots="{{true}}">
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item>
           <image src="{{item}}" class="slide-image" />
@@ -66,24 +49,44 @@
     <view class="show-title">
       <view class="show-title-wrapper">
         — 玩遍中国  —
-        <text class="show-title--all">查看全部</text>
+        <text class="show-title--all" data-id="0" bindtap="tapSearchIndex">查看全部</text>
       </view>
     </view>
 
     <view class="show-scroll">
       <scroll-view class="show-scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
-        <block wx:for="{{show}}">
+        <block wx:for="{{show}}" wx:key="{{item}}">
           <view class="show-scroll-view__item">
             <view class="scroll-image">
+              <view class="scroll-discount">
+                <view>9.8</view>
+                <view>折</view>
+              </view>
               <image src="{{item.imgurl}}" />
             </view>
             <view class="scroll-info">
               <view class="scroll-info-title">{{item.title}}</view>
+              <view class="scroll-info-second">
+                <view class="scroll-info-second--reason">{{item.reason}}</view>
+                <view class="scroll-info-second--price">{{'￥' + item.originalPrice}}</view>
+              </view>
+              <view class="scroll-info-type">
+                <view class="scroll-info-type--type">
+                  <block wx:for="{{item.feature}}" wx:for-index="idx" wx:for-item="iitem" wx:key="{{iitem}}">
+                    <view class="type-feature">
+                      {{iitem}}
+                    </view>
+                  </block>
+                </view>
+                <view class="scroll-info-type--price">{{'￥' + item.realPrice}}</view>
+              </view>
             </view>
           </view>
         </block>
         <view class="show-scroll-view__jump">
-          <text>查看全部</text>
+          <view class="show-scroll-view__jump--container">
+            <text>点击查看全部</text>
+          </view>
         </view>
       </scroll-view>
     </view>
