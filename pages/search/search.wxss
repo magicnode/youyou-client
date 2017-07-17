@@ -1,1 +1,7 @@
 @import "../../templates/search/search.wxss";
+
+.fliter {
+	display: flex;
+	background: white;
+	padding: 16rpx;
+}

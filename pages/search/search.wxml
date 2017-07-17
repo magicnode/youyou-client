@@ -2,5 +2,18 @@
 
 <view class="continer">
 	<template is="search" data="{{...search}}"/>
-	
+	<view class="fliter">
+		<view>智能排序</view>
+		<view>价格</view>
+		<view>最新</view>
+		<view>销量</view>
+		<view>折扣</view>
+		<view>
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			  <view class="picker">
+			    当前选择：{{array[index]}}
+			  </view>
+			</picker>
+		</view>
+	</view>
 </view>

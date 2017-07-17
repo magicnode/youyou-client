@@ -5,7 +5,8 @@ const app = getApp()
 Page({
   data: {
     searchWords: '',
-    placeholder: '输入线路名、出发城市'
+    placeholder: '输入线路名、出发城市',
+    array: ['美国', '中国', '巴西', '日本'],
   },
   onLoad: function (options) {
     const id = options['id']
@@ -48,4 +49,10 @@ Page({
   },
   tapSearchInput: search.tapSearchInput,
   tapSearchIndex: search.tapSearchIndex,
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
 });
